@@ -37,7 +37,9 @@ Dado un array de números, encontrar el número más grande.
 
 ```js
 cost numeros = [4, 17, 3, 25, 8, 11];
-let mayor = numeros[0]; // empezamos asumiendo que el primero es el mayor
+let mayor = numeros[0];
+
+
 
 // agregar el bucle for (usar .length para saber el largo del array)
 
