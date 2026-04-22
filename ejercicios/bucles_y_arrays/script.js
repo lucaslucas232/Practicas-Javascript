@@ -26,9 +26,23 @@ console.log("El número mayor es: ", mayor); // Resultado esperado: 25
 const palabras = ["sol", "montaña", "mar", "elefante", "río", "cascada"];
 const palabrasLargas = [];
 
-for (let i = 0; i < palabraslargas.length; i++) {
-    if (palabraslargas.length > 5) { 
-         palabras.push(palabrasLargas) {
-        console.log(palabras)
+for (let i = 0; i < palabras.length; i++) {
+    if (palabras[i].length > 5) { 
+        palabrasLargas.push(palabras[i]);
     }
 }
+
+console.log("Palabras con más de 5 letras:", palabrasLargas);
+
+// ejercicio 5 //
+
+const numero = 7; 
+let multiplicador = 1;
+let resultado = 0
+while (multiplicador <= 10) { 
+    resultado = (numero * multiplicador,multiplicador++)
+  console.log(numero + "x" + multiplicador + "=" + resultado );
+}
+
+// Ejercicio 6 //
+
