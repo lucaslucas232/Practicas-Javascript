@@ -3,54 +3,45 @@
 // ejercicio 1 //
 
 function saludar(nombre) {
-    return "Hola, " + nombre + "!"
-    console.log(saludar)
+  return "Hola, " + nombre + "!";
+  console.log(saludar);
 }
-
 
 // ejercicio 2 //
 
-function calculadora (numero1, numero2, operacion) {
-    if(operacion === "+")
-        return numero1 + numero2;
-    else if(operacion === "-")
-        return numero1 - numero2;
-    else if(operacion === "/")
-        return numero1 / numero2;
-    else if(operacion === "*")
-        return numero1 * numero2; 
-    console.log(calculadora)
-
+function calculadora(numero1, numero2, operacion) {
+  if (operacion === "+") return numero1 + numero2;
+  else if (operacion === "-") return numero1 - numero2;
+  else if (operacion === "/") return numero1 / numero2;
+  else if (operacion === "*") return numero1 * numero2;
+  console.log(calculadora);
 }
 
 // ejercicio 3 //
-let areaRectangulo =
-function areaRectangulo (numero1, numero2) {
-    return numero1 * numero2
-    console.log(areaRectangulo)
-}
+let areaRectangulo = function areaRectangulo(numero1, numero2) {
+  return numero1 * numero2;
+  console.log(areaRectangulo);
+};
 // ejercicio 4 //
 
-const esPar = (numero) => numero % 2 === 0 ? "es par" : "es impar";
+const esPar = (numero) => (numero % 2 === 0 ? "es par" : "es impar");
 
 // ejercicio 5 //
 
-const celsiusAFahrenheit = (C) => (C * 9/5) + 32;
+const celsiusAFahrenheit = (C) => (C * 9) / 5 + 32;
 
-
-// ejercicio 6 // 
+// ejercicio 6 //
 function calificarNota(nota) {
-    if (nota >= 90) {
-        return "A";
-    } else if (nota >= 80) {
-        return "B";
-    } else if (nota >= 70) {
-        return "C";
-    } else {
-        return "F";
-    }
+  if (nota >= 90) {
+    return "A";
+  } else if (nota >= 80) {
+    return "B";
+  } else if (nota >= 70) {
+    return "C";
+  } else {
+    return "F";
+  }
 }
-
 
 // ejercicio 7 //
 
@@ -62,16 +53,56 @@ function sumarArray(numeros) {
   return suma;
 }
 
-console.log(sumarArray([1, 2, 3, 4])); 
+console.log(sumarArray([1, 2, 3, 4]));
 
 // ejercicio 8 //
 
-function sumarArray(numeros) {
-  let suma = 0;
+function EncontrarMaximoPar(numeros) {
+  let mayorpar = null;
+
   for (let i = 0; i < numeros.length; i++) {
-    suma += numeros[i];
+    // acá comparamos con el string "es par"
+    if (esPar(numeros[i]) === "es par") {
+      if (mayorpar === null || numeros[i] > mayorpar) {
+        mayorpar = numeros[i];
+      }
+    }
   }
-  return suma;
+
+  return mayorpar;
+}
+console.log(EncontrarMaximoPar([3, 9, 2, 5]));
+
+// NO LOGRO EL RESULTADO = 2 NI CON AYUDA EN CLASE, NI CON COPILOT///
+
+// EJERCICIO 9 // 
+
+function contarVocales(texto) {
+    const array = Array.from(texto)
+    let letras = 0;
+
+    for (let i = 0; i < array.length; i++) {
+    if ("aeiou".includes(array[i])){
+        letras++;
+    }
 }
 
-console.log(sumarArray([1, 2, 3, 4])); 
+  return letras;
+}
+
+// Ejercicio 10 //
+/*
+function dobleNumeros(numeros){
+let doble = []
+
+for (let i = 0; i < numeros.length; i++) {
+    doble[i] = numeros[i] * 2
+    }
+  return doble;
+}
+array.map(item => console.log(item));
+dobleNumeros([1, 2, 3, 4])
+*/
+function dobleNumeros(numeros){
+return numeros.map((item) =>{return item * 2})
+}
