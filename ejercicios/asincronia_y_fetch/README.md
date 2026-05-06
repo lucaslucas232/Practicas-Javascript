@@ -5,7 +5,7 @@
 
 ## Ejercicio 1
 
-Pedir datos y mostrarlos
+Pedir datos y mostrarlos: `https://pokeapi.co/api/v2/pokemon/{pokemon}` (reemplazar `{pokemon}` por el nombre de un pokemon existente)
 
 Hacer una función que:
 
@@ -15,15 +15,15 @@ Hacer una función que:
 
 Extra:
 
-- Mostrar solo los primeros 3 elementos `.slice(1, 3)`
+- Usando el resultado del fetch mostrar por separado solo las tres primeras habilidades del pokemón `abilities.slice(1, 3)`
 
 ## Ejercicio 2
 
 Pasar de consola a DOM
 
-- Obtener una lista desde una API
-- Mostrarla en el HTML como lista (`<ul>` o `<div>`)
-- Cada elemento debe renderizar un campo (ej: nombre o título)
+- Obtener una lista desde una API: `https://pokeapi.co/api/v2/pokemon` devuelve una lista de pokemones en `"results"`
+- Renderizar cada nombre de pokemon en el HTML como lista (`<ul>` o `<div>`)
+- Cada `li` debe tener un link que en el src tenga la url del pokemon. `<li><a src="url">pokemon</a></li>`
 
 Bonus:
 
@@ -31,7 +31,9 @@ Bonus:
 
 ## Ejercicio 3
 
-- Mostrar un mensaje: "Cargando..." antes del fetch
+Usando el ejercicio anterior
+
+- Renderizar en un parrafo un mensaje: "Cargando..." antes del fetch
 - Cuando llegan los datos:
   - ocultar el loading
   - mostrar los datos
@@ -42,7 +44,7 @@ Bonus:
 
 ## Ejercicio 4
 
-Trabajar con fallos reales
+Trabajar con fallos reales y promesas
 
 - Hacer un fetch a una URL inválida o forzar error
 - Manejar el error con:
@@ -58,5 +60,5 @@ Bonus:
 
 - Hacer 2 llamadas:
   - Obtener un pokemon
-  - Con el resultado, hacer otra llamada `https://pokeapi.co/api/v2/ability/{name or Id}`
+  - Con el resultado, navegar a otra página que haga otra llamada `https://pokeapi.co/api/v2/ability/{name or Id}`
 - Mostrar el resultado final en pantalla
