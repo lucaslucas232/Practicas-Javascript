@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1></h1>
+
+    <ul>
+      <li></li>
+    </ul>
+
+    <script>
+      const hobbies = querySelector("ul li")
+      const titulo = document.querySelector("h1")
+          const programador = {
+              "nombre": "Lucas",
+              "edad": 34,
+              "esProgramador": true,
+              "hobbies": ["programar", "dormir"],
+              "saluda": () => console.log("hola "+ programador.nombre)
+          }
+
+          titulo.textContent=programador.nombre
+hobbies.textContent=programador.hobbies[0]
+programador.saluda()
+    </script>
+  </body>
+</html>
